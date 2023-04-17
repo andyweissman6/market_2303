@@ -67,7 +67,6 @@ RSpec.describe Vendor do
       expect(vendor1.potential_revenue).to eq(29.75)
       expect(vendor2.potential_revenue).to eq(345.00)
       expect(vendor3.potential_revenue).to eq(48.75)
-      require 'pry'; binding.pry
     end
     
   end
