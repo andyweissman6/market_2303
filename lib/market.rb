@@ -22,7 +22,25 @@ class Market
     end
   end
 
+  def sorted_item_list
+    items = []
+    @vendors.each do |vendor|
+      vendor.inventory.keys.each do |item|
+      items << item.name
+      end
+    end
+    items.uniq.sort
+  end
 
+  # def total_inventory
+  #   total = {}
+  #   @vendors.each do |vendor|
+  #     vendor.inventory.sum do |item, quantity|
+  #       require 'pry'; binding.pry
+  #       total[item] = quantity
+  #     end
+  #   end
+  # end
 
 
 end
